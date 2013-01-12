@@ -57,10 +57,25 @@ namespace ParallelStockPaths
 
         }
 
+        /// <summary>
+        /// Initializes a stock path.
+        /// </summary>
+        /// <param name="nbrSteps">The number of steps in the path.</param>
+        /// <param name="mean">The mean of the returns.</param>
+        /// <param name="std">The standard deviation of the returns.</param>
+        /// <remarks>This constructor assumes a time interval of 1 and a starting point of 100.</remarks>
         public StockPath(int nbrSteps, double mean, double std)
             :this(nbrSteps,mean,std,1.0,100.0)
         { }
 
+        /// <summary>
+        /// Initializes a stock path.
+        /// </summary>
+        /// <param name="nbrSteps">The number of steps in the path.</param>
+        /// <param name="mean">The mean of the returns.</param>
+        /// <param name="std">The standard deviation of the returns.</param>
+        /// <param name="timeInterval">The time between two evaluation points.</param>
+        /// <param name="initialPoint">The starting point of a path.</param>
         public StockPath(int nbrSteps, double mean, double std, double timeInterval, double initialPoint)
         {
             //Assigns internal setup variables
